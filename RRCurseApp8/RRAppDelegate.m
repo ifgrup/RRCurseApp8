@@ -25,20 +25,25 @@
     RRCity *sanFrancisco = [[RRCity alloc] init];
     sanFrancisco.cityName = @"San Francisco";
     sanFrancisco.cityDescription = @"The heart of the San Francisco Bay Area.";
-    sanFrancisco.cityPicture = [UIImage imageNamed:@"SanFrancisco.jpg"];
+    sanFrancisco.cityPicture = [UIImage imageNamed:@"3.png"];
     RRCity *sydney = [[RRCity alloc] init];
     sydney.cityName = @"Sydney";
     sydney.cityDescription = @"The largest city in Australia.";
-    sydney.cityPicture = [UIImage imageNamed:@"Sydney.jpg"];
+    sydney.cityPicture = [UIImage imageNamed:@"4.png"];
     
     RRCity *madrid = [[RRCity alloc] init];
     madrid.cityName = @"Madrid";
     madrid.cityDescription = @"The capital and largest city of Spain.";
-    madrid.cityPicture = [UIImage imageNamed:@"Madrid.jpg"];
+    madrid.cityPicture = [UIImage imageNamed:@"02.jpg"];
+    RRCity *barcelona = [[RRCity alloc] init];
+    barcelona.cityName = @"Barcelona";
+    barcelona.cityDescription = @"The  best capital and largest city of Spain.";
+    barcelona.cityPicture = [UIImage imageNamed:@"drslump.jpg"];
+
     
     //Creamos el mutable array con las ciudades creadas
     self.cities = [[NSMutableArray alloc]
-                   initWithObjects:london, sanFrancisco, sydney, madrid, nil];
+                   initWithObjects:london, sanFrancisco, sydney, madrid, barcelona, nil];
     
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {

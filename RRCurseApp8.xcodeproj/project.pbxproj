@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7831777018B65440006C1E85 /* 02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7831776F18B65440006C1E85 /* 02.jpg */; };
+		7831777418B65559006C1E85 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831777118B65559006C1E85 /* 3.png */; };
+		7831777518B65559006C1E85 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7831777218B65559006C1E85 /* 4.png */; };
+		7831777618B65559006C1E85 /* drslump.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7831777318B65559006C1E85 /* drslump.jpg */; };
+		7831777A18B65A2B006C1E85 /* RRAddCityControlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7831777818B65A2B006C1E85 /* RRAddCityControlerViewController.m */; };
+		7831777B18B65A2B006C1E85 /* RRAddCityControlerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7831777918B65A2B006C1E85 /* RRAddCityControlerViewController.xib */; };
 		788CA3F018B504BD006A1237 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788CA3EF18B504BD006A1237 /* Foundation.framework */; };
 		788CA3F218B504BD006A1237 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788CA3F118B504BD006A1237 /* CoreGraphics.framework */; };
 		788CA3F418B504BD006A1237 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788CA3F318B504BD006A1237 /* UIKit.framework */; };
@@ -38,6 +44,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7831776F18B65440006C1E85 /* 02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 02.jpg; sourceTree = "<group>"; };
+		7831777118B65559006C1E85 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		7831777218B65559006C1E85 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		7831777318B65559006C1E85 /* drslump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = drslump.jpg; sourceTree = "<group>"; };
+		7831777718B65A2B006C1E85 /* RRAddCityControlerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRAddCityControlerViewController.h; sourceTree = "<group>"; };
+		7831777818B65A2B006C1E85 /* RRAddCityControlerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRAddCityControlerViewController.m; sourceTree = "<group>"; };
+		7831777918B65A2B006C1E85 /* RRAddCityControlerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RRAddCityControlerViewController.xib; sourceTree = "<group>"; };
 		788CA3EC18B504BD006A1237 /* RRCurseApp8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RRCurseApp8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		788CA3EF18B504BD006A1237 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		788CA3F118B504BD006A1237 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,6 +105,9 @@
 		788CA3E318B504BD006A1237 = {
 			isa = PBXGroup;
 			children = (
+				7831777718B65A2B006C1E85 /* RRAddCityControlerViewController.h */,
+				7831777818B65A2B006C1E85 /* RRAddCityControlerViewController.m */,
+				7831777918B65A2B006C1E85 /* RRAddCityControlerViewController.xib */,
 				788CA42E18B519B0006A1237 /* img */,
 				788CA42B18B5169A006A1237 /* MODEL */,
 				788CA42318B51449006A1237 /* RRCityViewController.h */,
@@ -179,6 +195,10 @@
 		788CA42E18B519B0006A1237 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				7831777118B65559006C1E85 /* 3.png */,
+				7831777218B65559006C1E85 /* 4.png */,
+				7831777318B65559006C1E85 /* drslump.jpg */,
+				7831776F18B65440006C1E85 /* 02.jpg */,
 				788CA42C18B519AA006A1237 /* img1.png */,
 			);
 			name = img;
@@ -260,10 +280,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7831777B18B65A2B006C1E85 /* RRAddCityControlerViewController.xib in Resources */,
 				788CA3FA18B504BD006A1237 /* InfoPlist.strings in Resources */,
+				7831777018B65440006C1E85 /* 02.jpg in Resources */,
 				788CA42D18B519AA006A1237 /* img1.png in Resources */,
 				788CA42718B51449006A1237 /* RRCityViewController.xib in Resources */,
+				7831777618B65559006C1E85 /* drslump.jpg in Resources */,
+				7831777518B65559006C1E85 /* 4.png in Resources */,
 				788CA40218B504BD006A1237 /* Images.xcassets in Resources */,
+				7831777418B65559006C1E85 /* 3.png in Resources */,
 				788CA42218B504F9006A1237 /* RRViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7831777A18B65A2B006C1E85 /* RRAddCityControlerViewController.m in Sources */,
 				788CA42A18B5168B006A1237 /* RRCity.m in Sources */,
 				788CA40018B504BD006A1237 /* RRAppDelegate.m in Sources */,
 				788CA42618B51449006A1237 /* RRCityViewController.m in Sources */,
@@ -490,6 +516,7 @@
 				788CA41A18B504BD006A1237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		788CA41B18B504BD006A1237 /* Build configuration list for PBXNativeTarget "RRCurseApp8Tests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +525,7 @@
 				788CA41D18B504BD006A1237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
