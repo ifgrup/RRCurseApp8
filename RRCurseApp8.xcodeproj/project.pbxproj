@@ -31,6 +31,7 @@
 		788CA42718B51449006A1237 /* RRCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 788CA42518B51449006A1237 /* RRCityViewController.xib */; };
 		788CA42A18B5168B006A1237 /* RRCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 788CA42918B5168B006A1237 /* RRCity.m */; };
 		788CA42D18B519AA006A1237 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 788CA42C18B519AA006A1237 /* img1.png */; };
+		A372778018BCF52C00616569 /* defaultimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A372777F18BCF52C00616569 /* defaultimage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		788CA42818B5168B006A1237 /* RRCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRCity.h; path = MODEL/RRCity.h; sourceTree = "<group>"; };
 		788CA42918B5168B006A1237 /* RRCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRCity.m; path = MODEL/RRCity.m; sourceTree = "<group>"; };
 		788CA42C18B519AA006A1237 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
+		A372777F18BCF52C00616569 /* defaultimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultimage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		788CA42E18B519B0006A1237 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				A372777F18BCF52C00616569 /* defaultimage.jpg */,
 				7831777118B65559006C1E85 /* 3.png */,
 				7831777218B65559006C1E85 /* 4.png */,
 				7831777318B65559006C1E85 /* drslump.jpg */,
@@ -286,6 +289,7 @@
 				788CA42D18B519AA006A1237 /* img1.png in Resources */,
 				788CA42718B51449006A1237 /* RRCityViewController.xib in Resources */,
 				7831777618B65559006C1E85 /* drslump.jpg in Resources */,
+				A372778018BCF52C00616569 /* defaultimage.jpg in Resources */,
 				7831777518B65559006C1E85 /* 4.png in Resources */,
 				788CA40218B504BD006A1237 /* Images.xcassets in Resources */,
 				7831777418B65559006C1E85 /* 3.png in Resources */,

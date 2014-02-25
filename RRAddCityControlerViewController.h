@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RRAddCityControlerViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface RRAddCityControlerViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
  
     IBOutlet UITableView *miTabla;
@@ -16,9 +16,13 @@
     
     IBOutlet UITableViewCell *nameView;
     
+    IBOutlet UITableViewCell *pictureCell;
     
+    UIImage *cityPicture;
     //NSMutableArray *cities;
+    UIImagePickerController *pickerController;
 
 }
+- (IBAction)addPicture:(id)sender;
 
 @end

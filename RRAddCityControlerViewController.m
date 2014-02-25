@@ -35,6 +35,13 @@
     self.navigationItem.rightBarButtonItem =
     [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
                                                   target:self action:@selector(saveCity:)];
+
+    cityPicture = [UIImage imageNamed:@"defaultimage.jpg"];
+    pickerController = [[UIImagePickerController alloc] init];
+    pickerController.allowsEditing = NO;
+    pickerController.delegate = self;
+    pickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    
    
 }
 
@@ -61,6 +68,12 @@
     }
     if(indexPath.row==1)
     {
+        UIImageView *pictureView = (UIImageView *)[pictureCell viewWithTag:777];
+        pictureView.image = cityPicture;
+        cell = pictureCell;
+    }
+    if(indexPath.row==2)
+    {
         cell=descriptionView;
     }
       return cell;
@@ -70,22 +83,21 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat height;
-    if(indexPath.row==0)
-    {
-       height= 132;
+    if( indexPath.row == 0 ) {
+        height = 44;
+    } else if( indexPath.row == 1 ) {
+        height = 93;
+    } else {
+        height = 420;
     }
-    if(indexPath.row==1)
-    {
-        height= 440;
-    }
-    return height;
+    return height;    return height;
 }
 
 
 -(NSInteger) tableView:(UITableView*) tableView numberOfRowsInSection:(NSInteger)section{
     
     
-    return 2;
+    return 3;
     
 }
 
@@ -101,13 +113,43 @@
         RRCity *newCity = [[RRCity alloc] init];
         newCity.cityName = nameEntry.text;
         newCity.cityDescription = descriptionEntry.text;
-        newCity.cityPicture = nil;
+          newCity.cityPicture = cityPicture;
         [cities addObject:newCity];
         RRViewController *viewController = delegate.rrviewController;
         [viewController.miTabla reloadData];
     }
     [delegate.navController popViewControllerAnimated:YES];
 }
+
+
+- (IBAction)addPicture:(id)sender {
+    
+    UITextField *nameEntry = (UITextField *)[nameView viewWithTag:777];
+    [nameEntry resignFirstResponder];
+    [self presentModalViewController:pickerController animated:YES];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    cityPicture = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+     UIImageView *pictureView = (UIImageView *)[pictureCell viewWithTag:777];
+    pictureView.image = cityPicture;
+    [miTabla reloadData];
+    
+}
+/*
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [[self dismissViewControllerAnimated:YES completion:nil];
+     cityPicture = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+     UIImageView *pictureView = (UIImageView *)[pictureCell viewWithTag:777];
+     pictureView.image = cityPicture;
+     [tableView reloadData];
+     
+     }
+*/
+
 
 
 @end
