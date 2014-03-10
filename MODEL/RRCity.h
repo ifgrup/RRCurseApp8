@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface RRCity : NSObject{
+@interface RRCity : NSObject
+
     
-}
+
 @property (nonatomic, strong) NSString *cityName;
 @property (nonatomic, strong) NSString *cityDescription;
 @property (nonatomic, strong) UIImage *cityPicture;
+@property (nonatomic, assign) NSInteger cityID;
 
 @end

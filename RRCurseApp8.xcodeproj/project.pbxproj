@@ -31,6 +31,9 @@
 		788CA42718B51449006A1237 /* RRCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 788CA42518B51449006A1237 /* RRCityViewController.xib */; };
 		788CA42A18B5168B006A1237 /* RRCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 788CA42918B5168B006A1237 /* RRCity.m */; };
 		788CA42D18B519AA006A1237 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 788CA42C18B519AA006A1237 /* img1.png */; };
+		A342C13018C62CDF00778B92 /* RRCityDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = A342C12F18C62CDF00778B92 /* RRCityDAO.m */; };
+		A342C13218C638BC00778B92 /* cities2.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A342C13118C638BC00778B92 /* cities2.sqlite */; };
+		A342C13418C6394600778B92 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A342C13318C6394600778B92 /* libsqlite3.dylib */; };
 		A372778018BCF52C00616569 /* defaultimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A372777F18BCF52C00616569 /* defaultimage.jpg */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,10 @@
 		788CA42818B5168B006A1237 /* RRCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRCity.h; path = MODEL/RRCity.h; sourceTree = "<group>"; };
 		788CA42918B5168B006A1237 /* RRCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRCity.m; path = MODEL/RRCity.m; sourceTree = "<group>"; };
 		788CA42C18B519AA006A1237 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
+		A342C12E18C62CDF00778B92 /* RRCityDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RRCityDAO.h; path = MODEL/RRCityDAO.h; sourceTree = "<group>"; };
+		A342C12F18C62CDF00778B92 /* RRCityDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RRCityDAO.m; path = MODEL/RRCityDAO.m; sourceTree = "<group>"; };
+		A342C13118C638BC00778B92 /* cities2.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = cities2.sqlite; sourceTree = "<group>"; };
+		A342C13318C6394600778B92 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A372777F18BCF52C00616569 /* defaultimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultimage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A342C13418C6394600778B92 /* libsqlite3.dylib in Frameworks */,
 				788CA3F218B504BD006A1237 /* CoreGraphics.framework in Frameworks */,
 				788CA3F418B504BD006A1237 /* UIKit.framework in Frameworks */,
 				788CA3F018B504BD006A1237 /* Foundation.framework in Frameworks */,
@@ -134,6 +142,7 @@
 		788CA3EE18B504BD006A1237 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A342C13318C6394600778B92 /* libsqlite3.dylib */,
 				788CA3EF18B504BD006A1237 /* Foundation.framework */,
 				788CA3F118B504BD006A1237 /* CoreGraphics.framework */,
 				788CA3F318B504BD006A1237 /* UIKit.framework */,
@@ -159,6 +168,7 @@
 		788CA3F618B504BD006A1237 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A342C13118C638BC00778B92 /* cities2.sqlite */,
 				788CA3F718B504BD006A1237 /* RRCurseApp8-Info.plist */,
 				788CA3F818B504BD006A1237 /* InfoPlist.strings */,
 				788CA3FB18B504BD006A1237 /* main.m */,
@@ -190,6 +200,8 @@
 			children = (
 				788CA42818B5168B006A1237 /* RRCity.h */,
 				788CA42918B5168B006A1237 /* RRCity.m */,
+				A342C12E18C62CDF00778B92 /* RRCityDAO.h */,
+				A342C12F18C62CDF00778B92 /* RRCityDAO.m */,
 			);
 			name = MODEL;
 			sourceTree = "<group>";
@@ -289,6 +301,7 @@
 				788CA42D18B519AA006A1237 /* img1.png in Resources */,
 				788CA42718B51449006A1237 /* RRCityViewController.xib in Resources */,
 				7831777618B65559006C1E85 /* drslump.jpg in Resources */,
+				A342C13218C638BC00778B92 /* cities2.sqlite in Resources */,
 				A372778018BCF52C00616569 /* defaultimage.jpg in Resources */,
 				7831777518B65559006C1E85 /* 4.png in Resources */,
 				788CA40218B504BD006A1237 /* Images.xcassets in Resources */,
@@ -316,6 +329,7 @@
 				788CA42A18B5168B006A1237 /* RRCity.m in Sources */,
 				788CA40018B504BD006A1237 /* RRAppDelegate.m in Sources */,
 				788CA42618B51449006A1237 /* RRCityViewController.m in Sources */,
+				A342C13018C62CDF00778B92 /* RRCityDAO.m in Sources */,
 				788CA3FC18B504BD006A1237 /* main.m in Sources */,
 				788CA42118B504F9006A1237 /* RRViewController.m in Sources */,
 			);

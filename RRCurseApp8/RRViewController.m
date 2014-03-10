@@ -18,6 +18,7 @@
 
 @implementation RRViewController
 
+@synthesize dao;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,12 +33,25 @@
     [super viewDidLoad];
     // SharedApplication me genera un singleton
     self.title=@"City Guide";
-    RRAppDelegate *delegate =(RRAppDelegate *)[[UIApplication sharedApplication] delegate];
-    cities = delegate.cities;
+    //RRAppDelegate *delegate =(RRAppDelegate *)[[UIApplication sharedApplication] delegate];
+    //cities = delegate.cities;
+    dao = [[RRCityDAO alloc] init];
+	cities = [[NSMutableArray alloc] init];
+	cities = [dao obtenerCities];
+
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     // Do any additional setup after loading the view from its nib.
 }
+
+
+- (void) viewWillAppear:(BOOL)animated{
+	cities = [[NSMutableArray alloc] init];
+	cities = [dao obtenerCities];
+	[self.miTabla reloadData];
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -189,9 +203,20 @@
 
 - (void) tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle) editing forRowAtIndexPath:(NSIndexPath *)indexPath {
     if( editing == UITableViewCellEditingStyleDelete ) {
+            // delete  al city de la sqlite utilizando el dao
+        //NSLog(<#NSString *format, ...#>)
+        [dao deleteCity: [[[dao obtenerCities] objectAtIndex:indexPath.row] cityID]];
+        
         [cities removeObjectAtIndex:indexPath.row];
         [tv deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                   withRowAnimation:UITableViewRowAnimationLeft];
+        
+    
+        
+        
+        
+        
+        
     }
 }
 

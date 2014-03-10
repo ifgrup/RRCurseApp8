@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RRCityDAO.h"
 
 @interface RRAddCityControlerViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
@@ -21,8 +22,11 @@
     UIImage *cityPicture;
     //NSMutableArray *cities;
     UIImagePickerController *pickerController;
+    RRCityDAO *dao;
+
 
 }
+@property (nonatomic, strong) RRCityDAO *dao;
 - (IBAction)addPicture:(id)sender;
-
+-(IBAction)ocultarTeclado:(id)sender;
 @end

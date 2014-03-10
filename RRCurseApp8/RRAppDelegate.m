@@ -16,7 +16,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    
+    /*
     //Creamos difernetees citis para añadir al array
     RRCity *london = [[RRCity alloc] init];
     london.cityName = @"London";
@@ -44,7 +44,7 @@
     //Creamos el mutable array con las ciudades creadas
     self.cities = [[NSMutableArray alloc]
                    initWithObjects:london, sanFrancisco, sydney, madrid, barcelona, nil];
-    
+    */
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         //para lanzar la vista de iphone

@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RRCityDAO.h"
 
 @interface RRCityViewController : UIViewController
 {
     NSIndexPath *index;
     IBOutlet UIImageView *pictureView;
     IBOutlet UITextView *descriptionView;
+        RRCityDAO *dao;
 }
+@property (nonatomic, strong) RRCityDAO *dao;
 - (id)initWithIndexPath:(NSIndexPath *)indexPath;
 
 @end

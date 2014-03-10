@@ -76,6 +76,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                        <connections>
+                            <action selector="ocultarTeclado:" destination="-1" eventType="touchUpOutside" id="TxH-We-YJT"/>
+                            <action selector="ocultarTeclado:" destination="-1" eventType="editingDidEndOnExit" id="kQq-EA-NiT"/>
+                        </connections>
                     </textField>
                 </subviews>
             </tableViewCellContentView>

@@ -17,6 +17,8 @@
 
 @implementation RRAddCityControlerViewController
 
+   @synthesize dao;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -89,6 +91,7 @@
         height = 93;
     } else {
         height = 420;
+        
     }
     return height;    return height;
 }
@@ -104,9 +107,18 @@
 
 
 - (void)saveCity:(id)sender {
+    
+    
     RRAppDelegate *delegate =
     (RRAppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSMutableArray *cities = delegate.cities;
+    
+    
+    //NSMutableArray *cities = delegate.cities;
+     dao = [[RRCityDAO alloc] init];
+    
+    
+    // NSMutableArray *cities = [dao obtenerCities];
+    
     UITextField *nameEntry = (UITextField *)[nameView viewWithTag:777];
     UITextView *descriptionEntry =(UITextView *)[descriptionView viewWithTag:777];
     if ( nameEntry.text.length > 0 ) {
@@ -114,11 +126,19 @@
         newCity.cityName = nameEntry.text;
         newCity.cityDescription = descriptionEntry.text;
           newCity.cityPicture = cityPicture;
-        [cities addObject:newCity];
+        
+        [dao addCity:newCity.cityName withDescription: newCity.cityDescription withImage:newCity.cityPicture ];
+       // [cities addObject:newCity];
+        
+        
+        
         RRViewController *viewController = delegate.rrviewController;
         [viewController.miTabla reloadData];
     }
     [delegate.navController popViewControllerAnimated:YES];
+    
+    
+    
 }
 
 
@@ -150,6 +170,9 @@
      }
 */
 
-
+-(IBAction)ocultarTeclado:(id)sender
+{
+    
+}
 
 @end

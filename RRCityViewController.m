@@ -17,6 +17,8 @@
 
 @implementation RRCityViewController
 
+
+   @synthesize dao;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -39,9 +41,13 @@
     // Do any additional setup after loading the view from its nib.
     
     //Generamoos el singleton del appdelegate para capturar el array de citys
-    RRAppDelegate *delegate =(RRAppDelegate *)[[UIApplication sharedApplication] delegate];
+   // RRAppDelegate *delegate =(RRAppDelegate *)[[UIApplication sharedApplication] delegate];
+ 
+    dao = [[RRCityDAO alloc] init];
+	
+	
     
-    RRCity *thisCity = [delegate.cities objectAtIndex:index.row];
+    RRCity *thisCity = [[dao obtenerCities] objectAtIndex:index.row];
     self.title = thisCity.cityName;
     descriptionView.text = thisCity.cityDescription;
     descriptionView.editable = NO;

@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RRCityDAO.h"
 
 @interface RRViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 {
      NSMutableArray *cities;
+    RRCityDAO *dao;
 }
 @property (weak, nonatomic) IBOutlet UITableView *miTabla;
-
+@property (nonatomic, strong) RRCityDAO *dao;
 @end
